@@ -22,7 +22,7 @@ function Recipe(props) {
 
     const recipe = props.recipes.map(recipe => {
         return (
-            <div key={recipe.id} className="col-lg-3 col-sm-6 m-1">
+            <div key={recipe.id} className="col m-1">
                 <RenderRecipeItem recipe={recipe}/>
             </div>
         );

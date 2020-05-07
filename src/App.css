@@ -10,9 +10,8 @@ h1{
 }
   
 h2 {
-  color: #3046C5;
+  color:yellow;
 }
-
 .card-shadow {
   box-shadow: 5px 8px 20px rgb(5, 5, 5);
   transition: all .4s;
@@ -57,4 +56,34 @@ h2 {
   border-bottom: 1px ridge;
   border-color:green;
   color: green;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid  green;
+  transition: all .4s;
+  font-weight: bold;
+}
+
+.search-input:focus {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 2px solid yellow;
+  font-size: large;
+}
+
+.search-button {
+  border-radius: 50%;
+  /* padding: 10px 16px; */
+  transition: all .4s;
+  background: transparent;
+  border: transparent;
+}
+
+.search-button:hover{
+  transform: translateY(-1px);
+  background: transparent;
+  border: transparent;
 }

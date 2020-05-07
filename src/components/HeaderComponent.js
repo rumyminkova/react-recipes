@@ -42,14 +42,30 @@ class Header extends Component {
             <React.Fragment>
                 <Jumbotron fluid>
                     <div className="container">
-                        <div className="row">
-                            <div className="col">
+                        <div className="row align-items-center">
+                            <div className="col-md-3">
                                 <h1>My Recipes</h1>
-                                <h2>a better way to live</h2>
+                                <h2>a better way to eat</h2>
+                            </div>
+                            <div className="col-md-6">
+                                <Form>
+                                    <div className="input-group">
+                                        <Input type="text" className="form-control search-input" placeholder="Search..."/>
+                                        <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
+                                    </div>
+                                </Form>
+                            </div>
+                            <div class="col-md-3">
+                                <span className="mr-md-auto">
+                                    <Button onClick={this.toggleModal} className="btn btn-success">
+                                        <i className="fa fa-sign-in fa-lg" /> Login
+                                    </Button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </Jumbotron>
+
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
@@ -76,11 +92,7 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-                            <span className="navbar-text ml-auto">
-                                <Button outline onClick={this.toggleModal}>
-                                    <i className="fa fa-sign-in fa-lg" /> Login
-                                </Button>
-                            </span>
+                            
                         </Collapse>
                     </div>
                 </Navbar>
