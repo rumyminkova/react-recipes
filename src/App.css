@@ -2,24 +2,32 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background: url("cutting-board.jpg") no-repeat center center /cover;
 }
 
 h1{
   font-family: 'Kalam', cursive;
 }
   
-  
-  h2, h3, .card-body>h5 {
-font-family: "Lobster", cursive;
-}
-
 h2 {
   color: #3046C5;
 }
 
-.card-img-overlay h5 {
-color: white;
-background-color: rgba(0, 0, 0, 0.5);
+.card-shadow {
+  box-shadow: 5px 8px 20px rgb(5, 5, 5);
+  transition: all .4s;
+  width: 18rem;
+  height: 25rem;
+  min-width: 18rem;
+  max-width: 25rem;
+
+}
+
+
+.card-shadow:hover{
+  box-shadow: 6px 9px 30px rgb(5, 5, 5);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .row-content {
@@ -29,21 +37,24 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .site-footer {
-  background-image: linear-gradient(#CEC8FF, white);
-  padding: 20px 0;
+  background:transparent;
+  
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-  color: white;
+  background:transparent; 
+  color: green;
 }
 
 .jumbotron h2 {
-  color: #CEC8FF;
+  color:yellow;
 }
 
 .navbar-dark {
-  background-color: #901CAD;
+  background:transparent; 
+  border-bottom: 1px ridge;
+  border-color:green;
+  color: green;
 }
