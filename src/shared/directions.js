@@ -13,6 +13,6 @@ export const DIRECTIONS =
     {
         id: 2,
         recipeId: 0,
-        text: "Transfer chicken to a warm platter. Cover loosely to keep warm. Boil remaining liquid over high heat, uncovered, until reduced to 1/2 cup. Spoon sauce over chicken."
+        text: "Transfer chicken to a warm platter. Cover loosely to keep warm. Boil remaining liquid over high heat, uncovered, until reduced to 1/2 cup. Spoon sauce over chicken. Making Changes here."
     }
 ]
