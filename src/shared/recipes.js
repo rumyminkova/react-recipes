@@ -1,34 +1,34 @@
 export const RECIPES = [
     {
         id: 0,
-        name: "React Lake Campground",
-        image: "/assets/images/react-lake.jpg",
-        elevation: 1233,
-        featured: false,
-        description: "Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers."
+        name: "Lemon Basil Chicken",
+        image: "/assets/images/lemon-basil-chicken.png",
+        rating: 5,
+        category: "main dish",
+        description: "Fabulous lemon basil chicken dish that is always a crowd pleaser! Quick and easy, this recipe never fails. Serve plain or over rice."
     },
     {
         id: 1,
-        name:"Chrome River Campground ",
-        image: "/assets/images/chrome-river.jpg",
-        elevation: 877,
-        featured: false,
-        description: "Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River."
+        name: "Classic Beef Stroganoff in a Slow Cooker",
+        image: "/assets/images/classic-beef-stroganoff.png",
+        rating: 4.5,
+        category: "main dish",
+        description: "This classic beef stroganoff recipe uses ingredients commonly kept on hand for an easy and delicious family meal."
     },
     {
         id: 2,
-        name:"Breadcrumb Trail Campground",
-        image: "/assets/images/breadcrumb-trail.jpg",
-        elevation: 2901,
-        featured: false,
-        description: "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+        name: "Strawberry Chocolate Mousse Cake",
+        image: "/assets/images/strawberry-chocolate-mousse-cake.png",
+        rating: 5,
+        category: "dessert",
+        description: "Fresh strawberries and chocolate mousse make an appealing treat."
     },
     {
         id: 3,
-        name:"Redux Woods Campground",
-        image: "/assets/images/redux-woods.jpg",
-        elevation: 42,
-        featured: true,
-        description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
+        name: "Fluffy Pancakes",
+        image: "/assets/images/fluffy-pancakes.png",
+        rating: 4,
+        category: "breakfast",
+        description: "Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist."
     }
 ];

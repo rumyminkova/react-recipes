@@ -5,11 +5,6 @@ import CampsiteInfo from './CampsiteInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
-import About from './AboutComponent';
-import Contact from './ContactComponent';
-import { COMMENTS } from '../shared/reviews';
-import { PARTNERS } from '../shared/partners';
-import { PROMOTIONS } from '../shared/promotions';
 import { RECIPES } from '../shared/recipes';
 
 class Main extends Component {
@@ -17,10 +12,7 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            recipes: RECIPES,
-            ingredients: INGREDIENTS,
-            directions: DIRECTIONS,
-            reviews: REVIEWS
+            recipes: RECIPES
         };
     }
 
@@ -32,14 +24,15 @@ class Main extends Component {
                     campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
                     promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
                     partner={this.state.partners.filter(partner => partner.featured)[0]}
+                    p
                 />
             );
         };
 
-        const CampsiteWithId = ({match}) => {
+        const RecipeWithId = ({match}) => {
             return (
-                <CampsiteInfo 
-                    campsite={this.state.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
+                <RecipeInfo 
+                    recipe={this.state.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
                     comments={this.state.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)}
                 />
             );
