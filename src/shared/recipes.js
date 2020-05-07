@@ -29,6 +29,6 @@ export const RECIPES = [
         image: "/assets/images/fluffy-pancakes.png",
         rating: 4,
         category: "breakfast",
-        description: "Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist."
+        description: "Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist. s"
     }
 ];
