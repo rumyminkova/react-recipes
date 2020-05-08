@@ -11,7 +11,7 @@ export const RECIPES = [
         id: 1,
         name: "Classic Beef Stroganoff in a Slow Cooker",
         image: "/assets/images/classic-beef-stroganoff.png",
-        rating: 4.5,
+        rating: 4,
         category: "main dish",
         description: "This classic beef stroganoff recipe uses ingredients commonly kept on hand for an easy and delicious family meal."
     },
@@ -19,7 +19,7 @@ export const RECIPES = [
         id: 2,
         name: "Strawberry Chocolate Mousse Cake",
         image: "/assets/images/strawberry-chocolate-mousse-cake.png",
-        rating: 5,
+        rating: 3,
         category: "dessert",
         description: "Fresh strawberries and chocolate mousse make an appealing treat."
     },

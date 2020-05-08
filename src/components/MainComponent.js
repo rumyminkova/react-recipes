@@ -1,53 +1,39 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Directory from './DirectoryComponent';
-import CampsiteInfo from './CampsiteInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import Home from './HomeComponent';
-import { RECIPES } from '../shared/recipes';
+import Recipe from './RecipeComponent';
+import {RECIPES } from '../shared/recipes';
+import {REVIEWS} from '../shared/reviews';
 
 class Main extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            recipes: RECIPES
+            recipes: RECIPES,
+            reviews: REVIEWS
         };
     }
 
     render() {
 
-        const HomePage = () => {
-            return (
-                <Home 
-                    campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
-                    promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
-                    partner={this.state.partners.filter(partner => partner.featured)[0]}
-                    p
-                />
-            );
-        };
-
-        const RecipeWithId = ({match}) => {
-            return (
-                <RecipeInfo 
-                    recipe={this.state.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]}
-                    comments={this.state.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)}
-                />
-            );
-        };  
+        // const RecipeWithId = ({match}) => {
+        //     return (
+        //         <RecipeInfo 
+        //             recipe={this.state.recipes.filter(recipe => recipe.id === +match.params.recipeId)[0]}
+        //             reviews={this.state.reviews.filter(review => review.recipeId === +match.params.recipeId)}
+        //         />
+        //     );
+        // };  
 
         return (
             <div>
                 <Header />
                 <Switch>
-                    <Route path='/home' component={HomePage} />
-                    <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} />
-                    <Route path='/directory/:campsiteId' component={CampsiteWithId} />
-                    <Route exact path='/contactus' component={Contact} />
-                    <Route exact path='/aboutus' render={() => <About partners={this.state.partners} />} />
-                    <Redirect to='/home' />
+                    <Route exact path='/recipes' render={() => <Recipe recipes={this.state.recipes} />} />
+                    {/* <Route path='/recipes/:recipeId' component={RecipeWithId} /> */}
+                    <Redirect to='/recipes' render={() => <Recipe recipes={this.state.recipes} />}/>
                 </Switch>
                 <Footer/>
             </div>
