@@ -42,60 +42,70 @@ class Header extends Component {
             <React.Fragment>
                 <Jumbotron fluid>
                     <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-md-3">
-                                <h1>My Recipes</h1>
-                                <h2>a better way to eat</h2>
+                        <div className="row p-1">
+                            <div className="col align-self-start">
+                                <h1 className="display-4">Recipes</h1>
+                                <h2>better way to eat</h2>
                             </div>
-                            <div className="col-md-6">
-                                <Form>
-                                    <div className="input-group">
-                                        <Input type="text" className="form-control search-input" placeholder="Search..."/>
-                                        <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
-                                    </div>
-                                </Form>
-                            </div>
-                            <div class="col-md-3">
-                                <span className="mr-md-auto">
-                                    <Button onClick={this.toggleModal} className="btn btn-success">
-                                        <i className="fa fa-sign-in fa-lg" /> Login
-                                    </Button>
-                                </span>
+                        </div>
+              
+                        <div class="row justify-content-end">
+                            <div className="col-3 offset-9 m-0 text-right">
+                                <Button onClick={this.toggleModal} className="btn btn-success">
+                                    <i className="fa fa-sign-in fa-lg" /> Login
+                                </Button>
                             </div>
                         </div>
                     </div>
                 </Jumbotron>
 
-                <Navbar dark sticky="top" expand="md">
+
+                <div className="container">
+                    <div className="row p-1 my-3 justify-content-center">
+                        <div className="col-12 col-md-8 col-lg-10 text-center">
+                            <Form>
+                                <div className="input-group">
+                                    <Input type="text" className="form-control search-input" placeholder="Search ..."/>
+                                    <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
+                                </div>
+                            </Form>
+                        </div>
+                    </div>
+                </div>
+
+                <Navbar light sticky="top" expand="md" >
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
+                                    <NavLink className="nav-link" to="/contactus">
+                                    All
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
                                     <NavLink className="nav-link" to="/home">
-                                        <i className="fa fa-home fa-lg" /> Home
+                                        Breakfast
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/directory">
-                                        <i className="fa fa-list fa-lg" /> Directory
+                                         Main Dishes
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/aboutus">
-                                        <i className="fa fa-info fa-lg" /> About
+                                        Desserts
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                        <i className="fa fa-address-card fa-lg" /> Contact Us
-                                    </NavLink>
-                                </NavItem>
+                          
                             </Nav>
-                            
-                        </Collapse>
+                         </Collapse>
                     </div>
                 </Navbar>
+
+            
+
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
