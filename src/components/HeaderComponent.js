@@ -44,8 +44,8 @@ class Header extends Component {
                     <div className="container">
                         <div className="row p-1">
                             <div className="col align-self-start">
-                                <h1 className="display-4">Recipes</h1>
-                                <h2>better way to eat</h2>
+                                <h1 className="display-3">Recipes</h1>
+                                <h3>healthy recipes for everyone</h3>
                             </div>
                         </div>
               
@@ -73,11 +73,11 @@ class Header extends Component {
                     </div>
                 </div>
 
-                <Navbar light sticky="top" expand="md" >
+                <Navbar light sticky="top" expand="md" className="my-3">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
+                            <Nav navbar className="nav-fill text-center">
                                 <NavItem>
                                     <NavLink className="nav-link" to="/contactus">
                                     All
@@ -98,7 +98,6 @@ class Header extends Component {
                                         Desserts
                                     </NavLink>
                                 </NavItem>
-                          
                             </Nav>
                          </Collapse>
                     </div>

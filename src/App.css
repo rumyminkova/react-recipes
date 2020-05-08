@@ -1,14 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 body {
   font-family: "Open Sans", sans-serif;
   
 }
 
+h1{
+  font-family: 'Marck Script', cursive;
+
+}
 
 
-h2 {
+h3 {
   color: yellow;
+  font-weight:lighter;
+  
+
 }
 .card-shadow {
   box-shadow: 5px 8px 20px rgb(5, 5, 5);
