@@ -5,6 +5,7 @@ import Footer from './FooterComponent';
 import Recipe from './RecipeComponent';
 import {RECIPES } from '../shared/recipes';
 import {REVIEWS} from '../shared/reviews';
+import Example from './CarouselComponent'
 
 class Main extends Component {
 
@@ -30,10 +31,12 @@ class Main extends Component {
         return (
             <div>
                 <Header />
+                <Example />
                 <Switch>
                     <Route exact path='/recipes' render={() => <Recipe recipes={this.state.recipes} />} />
                     {/* <Route path='/recipes/:recipeId' component={RecipeWithId} /> */}
                     <Redirect to='/recipes' render={() => <Recipe recipes={this.state.recipes} />}/>
+                    
                 </Switch>
                 <Footer/>
             </div>
