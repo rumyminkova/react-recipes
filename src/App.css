@@ -1,29 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: url("cutting-board.jpg") no-repeat center center /cover;
+  background: url("cutting-board.jpg") no-repeat center center / cover;
 }
 
-h1{
-  font-family: 'Kalam', cursive;
+h1 {
+  font-family: "Kalam", cursive;
 }
-  
+
 h2 {
-  color:yellow;
+  color: yellow;
 }
 .card-shadow {
   box-shadow: 5px 8px 20px rgb(5, 5, 5);
-  transition: all .4s;
+  transition: all 0.4s;
   width: 18rem;
   height: 25rem;
   min-width: 18rem;
   max-width: 25rem;
-
 }
 
-
-.card-shadow:hover{
+.card-shadow:hover {
   box-shadow: 6px 9px 30px rgb(5, 5, 5);
   transform: translateY(-2px);
   cursor: pointer;
@@ -36,25 +34,24 @@ h2 {
 }
 
 .site-footer {
-  background:transparent;
-  
+  background: transparent;
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background:transparent; 
+  background: transparent;
   color: green;
 }
 
 .jumbotron h2 {
-  color:yellow;
+  color: yellow;
 }
 
 .navbar-dark {
-  background:transparent; 
+  background: transparent;
   border-bottom: 1px ridge;
-  border-color:green;
+  border-color: green;
   color: green;
 }
 
@@ -62,8 +59,8 @@ h2 {
   background: transparent;
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid  green;
-  transition: all .4s;
+  border-bottom: 2px solid green;
+  transition: all 0.4s;
   font-weight: bold;
 }
 
@@ -77,13 +74,21 @@ h2 {
 .search-button {
   border-radius: 50%;
   /* padding: 10px 16px; */
-  transition: all .4s;
+  transition: all 0.4s;
   background: transparent;
   border: transparent;
 }
 
-.search-button:hover{
+.search-button:hover {
   transform: translateY(-1px);
   background: transparent;
   border: transparent;
+}
+
+.carousel-image {
+  width: 1000px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
