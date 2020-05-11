@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardImg, CardBody,
     CardTitle, CardSubtitle} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { StarRating } from '@thumbtack/thumbprint-react';
 
 function RenderRecipeItem({recipe}) {
     return (
@@ -9,7 +10,9 @@ function RenderRecipeItem({recipe}) {
             <Link to={`/recipe/${recipe.id}`}>
                 <CardImg top src={recipe.image} alt={recipe.name} height="250"/>
                 <CardBody className="text-center">
-                    <CardSubtitle>{recipe.rating}</CardSubtitle>
+                    <CardSubtitle>
+                        <StarRating rating={recipe.rating} size="medium" />
+                    </CardSubtitle>
                     <CardTitle className="mt-3">{recipe.name}</CardTitle>
                  </CardBody>
             </Link>

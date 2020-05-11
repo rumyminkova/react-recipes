@@ -52,7 +52,7 @@ class Header extends Component {
                         <div class="row justify-content-end">
                             <div className="col-3 offset-9 m-0 text-right">
                                 <Button onClick={this.toggleModal} className="btn btn-success">
-                                    <i className="fa fa-sign-in fa-lg" /> Login
+                                    <i className="fa fa-book fa-lg" /> My Cookbook
                                 </Button>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ class Header extends Component {
                     </div>
                 </div>
 
-                <Navbar light sticky="top" expand="md" className="my-3">
+                {/* <Navbar light sticky="top" expand="md" className="my-3">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
@@ -101,12 +101,12 @@ class Header extends Component {
                             </Nav>
                          </Collapse>
                     </div>
-                </Navbar>
+                </Navbar> */}
 
             
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                    <ModalHeader toggle={this.toggleModal}>Sign in</ModalHeader>
                     <ModalBody>
                         <Form onSubmit={this.handleLogin}>
                             <FormGroup>
@@ -126,7 +126,7 @@ class Header extends Component {
                                     Remember me
                                 </Label>
                             </FormGroup>
-                            <Button type="submit" value="submit" color="primary">Login</Button>
+                            <Button type="submit" value="submit" color="primary">Sign in</Button>
                         </Form>
                     </ModalBody>
                 </Modal>
