@@ -2,8 +2,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: url("cutting-board_new.jpg") no-repeat center center / cover;
-  
 }
 
 h1{
@@ -21,16 +19,17 @@ h3 {
 .card-shadow {
   box-shadow: 5px 8px 20px rgb(5, 5, 5);
   transition: all 0.4s;
-  width: 18rem;
-  height: 25rem;
-  min-width: 18rem;
-  max-width: 25rem;
 }
 
 .card-shadow:hover {
   box-shadow: 6px 9px 30px rgb(5, 5, 5);
   transform: translateY(-2px);
   cursor: pointer;
+}
+
+.card-name {
+  font-weight:bold;
+  color: green;
 }
 
 .row-content {
@@ -44,7 +43,7 @@ h3 {
 }
 
 .jumbotron {
-  background: transparent;
+  background: url("food-header.jpg") no-repeat center center / cover;
   margin: 0;
   color: green;
   padding: 30px 0px;
@@ -99,7 +98,7 @@ h3 {
 }
 
 .site-footer {
-  background: transparent;
+  background: url("food-footer.jpg") no-repeat center center / cover;
   margin: 0;
   color: green;
   padding: 20px 0px;
