@@ -1,25 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 body {
   font-family: "Open Sans", sans-serif;
+  background: url("cutting-board_new.jpg") no-repeat center center / cover;
+  
 }
 
 h1{
-  font-family: 'Kalam', cursive;
-}
-  
-  
-  h2, h3, .card-body>h5 {
-font-family: "Lobster", cursive;
+  font-family: 'Marck Script', cursive;
+
 }
 
-h2 {
-  color: #3046C5;
+
+h3 {
+  color: yellow;
+  font-weight:lighter;
+  
+
+}
+.card-shadow {
+  box-shadow: 5px 8px 20px rgb(5, 5, 5);
+  transition: all 0.4s;
+  width: 18rem;
+  height: 25rem;
+  min-width: 18rem;
+  max-width: 25rem;
 }
 
-.card-img-overlay h5 {
-color: white;
-background-color: rgba(0, 0, 0, 0.5);
+.card-shadow:hover {
+  box-shadow: 6px 9px 30px rgb(5, 5, 5);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .row-content {
@@ -29,21 +40,68 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 .site-footer {
-  background-image: linear-gradient(#CEC8FF, white);
-  padding: 20px 0;
+  background: transparent;
 }
 
 .jumbotron {
+  background: transparent;
   margin: 0;
-  padding: 30px;
-  background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-  color: white;
+  color: green;
+  padding: 30px 0px;
 }
 
 .jumbotron h2 {
-  color: #CEC8FF;
+  color: yellow;
 }
 
 .navbar-dark {
-  background-color: #901CAD;
+  background: transparent;
+  border-color: green;
+  color: green;
 }
+
+.search-input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid green;
+  transition: all 0.4s;
+  font-weight: bold;
+}
+
+.search-input:focus {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 2px solid yellow;
+  font-size: large;
+}
+
+.search-button {
+  border-radius: 50%;
+  /* padding: 10px 16px; */
+  transition: all 0.4s;
+  background: transparent;
+  border: transparent;
+}
+
+.search-button:hover {
+  transform: translateY(-1px);
+  background: transparent;
+  border: transparent;
+}
+
+.carousel-image {
+  width: 1000px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.site-footer {
+  background: transparent;
+  margin: 0;
+  color: green;
+  padding: 20px 0px;
+}
+
