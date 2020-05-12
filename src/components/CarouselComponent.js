@@ -10,22 +10,22 @@ import {
 const items = [
   {
     src: "/assets/images/classic-beef-stroganoff.png",
-    altText: "Slide 1",
-    caption: "Slide 1"
+    altText: "Classic Beef Stroganoff",
+    caption: "Very Delicous!"
   },
   {
     src: "/assets/images/strawberry-chocolate-mousse-cake.png",
-    altText: "Slide 2",
-    caption: "Slide 2"
+    altText: "Strawberry Chocolate Mousse cake",
+    caption: "Tasty Delights!"
   },
   {
     src: "/assets/images/fluffy-pancakes.png",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    altText: "Fluffy Pancakes",
+    caption: "Syrupy Goodness!"
   }
 ];
 
-const Example = props => {
+const CarouselFeature = props => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -92,4 +92,4 @@ const Example = props => {
   );
 };
 
-export default Example;
+export default CarouselFeature;
