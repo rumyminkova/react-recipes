@@ -31,7 +31,7 @@ class Main extends Component {
         return (
             <div>
                 <Header />
-                <Example />
+                {/* <Example /> */}
                 <Switch>
                     <Route exact path='/recipes' render={() => <Recipe recipes={this.state.recipes} />} />
                     {/* <Route path='/recipes/:recipeId' component={RecipeWithId} /> */}

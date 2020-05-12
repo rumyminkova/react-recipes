@@ -62,7 +62,7 @@ class Header extends Component {
 
                 <div className="container">
                     <div className="row p-1 my-3 justify-content-center">
-                        <div className="col-12 col-md-8 col-lg-10 text-center">
+                        <div className="col-12 col-md-10 col-lg-11 text-center">
                             <Form>
                                 <div className="input-group">
                                     <Input type="text" className="form-control search-input" placeholder="Search ..."/>

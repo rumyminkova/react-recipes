@@ -54,12 +54,15 @@ const Example = props => {
         key={item.src}
       >
         <div className="row justify-content-center">
-          <img className="carousel-image" src={item.src} alt={item.altText} />
+          <div className="col-6">
 
-          <CarouselCaption
-            captionText={item.caption}
-            captionHeader={item.caption}
-          />
+              <img className="carousel-image" src={item.src} alt={item.altText} />
+
+              <CarouselCaption
+                captionText={item.caption}
+                captionHeader={item.caption}
+              />
+          </div>
         </div>
       </CarouselItem>
     );
