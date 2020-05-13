@@ -21,7 +21,7 @@ function RenderRecipe({ recipe }) {
 
   return (
     <div className="col-md-5 m-1">
-      <Card>
+      <Card className="card">
         <CardImg top src={recipe.image} alt={recipe.name} />
         <div className="overlay">{recipe.description}</div>
       </Card>
@@ -47,29 +47,29 @@ function RenderRecipe({ recipe }) {
             Reviews
           </NavLink>
         </NavItem>
-        <TabContent activeTab={activeTab}>
-          <TabPane tabId="1">
-            <Row>
-              <Col sm="12">
-                <div>
-                  <h1 className="black">Ingredients</h1>
-                  <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                  <h1 className="black">Directions</h1>
-                  <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ol>
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-        </TabContent>
       </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          <Row>
+            <Col sm="12">
+              <div>
+                <h1 className="black">Ingredients</h1>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <h1 className="black">Directions</h1>
+                <ol>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ol>
+              </div>
+            </Col>
+          </Row>
+        </TabPane>
+      </TabContent>
     </div>
   );
 }

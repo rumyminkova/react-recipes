@@ -119,7 +119,7 @@ h3 {
   background-color: rgb(182, 192, 196);
 }
 
-.container:hover .overlay {
+.card:hover .overlay {
   opacity: 1;
 }
 
