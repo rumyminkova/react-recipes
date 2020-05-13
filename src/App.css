@@ -6,7 +6,7 @@ body {
 
 h1{
   font-family: 'Marck Script', cursive;
-
+  color: yellow;
 }
 
 
@@ -43,7 +43,7 @@ h3 {
 }
 
 .jumbotron {
-  background: url("food-header.jpg") no-repeat center center / cover;
+  background: url("cutting-board_header.jpg") no-repeat center center / cover;
   margin: 0;
   color: green;
   padding: 30px 0px;
@@ -98,7 +98,7 @@ h3 {
 }
 
 .site-footer {
-  background: url("food-footer.jpg") no-repeat center center / cover;
+  background: url("cutting-board_footer.jpg") no-repeat center center / cover;
   margin: 0;
   color: green;
   padding: 20px 0px;
