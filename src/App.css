@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1{
-  font-family: 'Marck Script', cursive;
+h1 {
+  font-family: "Marck Script", cursive;
   color: yellow;
 }
 
-
 h3 {
   color: yellow;
-  font-weight:lighter;
-  
-
+  font-weight: lighter;
 }
 .card-shadow {
   box-shadow: 5px 8px 20px rgb(5, 5, 5);
@@ -28,7 +25,7 @@ h3 {
 }
 
 .card-name {
-  font-weight:bold;
+  font-weight: bold;
   color: green;
 }
 
@@ -104,3 +101,41 @@ h3 {
   padding: 20px 0px;
 }
 
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgb(182, 192, 196);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.black {
+  color: black;
+  font-family: "Marck Script", cursive;
+}
