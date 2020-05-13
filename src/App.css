@@ -87,7 +87,7 @@ h3 {
 }
 
 .carousel-image {
-  width: 600px;
+  width: 800px;
   height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@ h3 {
 
 .container {
   position: relative;
-  width: 50%;
+  width: 70%;
 }
 
 .overlay {
