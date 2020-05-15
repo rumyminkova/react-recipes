@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import {
   Card,
   CardImg,
+  CardBody,
+  CardText,
+  CardTitle,
+  CardImgOverlay,
   TabContent,
   TabPane,
   Nav,
@@ -11,11 +15,11 @@ import {
   Col
 } from "reactstrap";
 import classnames from "classnames";
+import { StarRating } from '@thumbtack/thumbprint-react';
 
 function RenderIngredients({ ingredients }) {
   if (ingredients) {
     return (
-      <div className="col-md-5 m-1">
         <ul>
           {ingredients.map(ingredient => {
             return (
@@ -25,7 +29,6 @@ function RenderIngredients({ ingredients }) {
             );
           })}
         </ul>
-      </div>
     );
   }
 
@@ -34,8 +37,7 @@ function RenderIngredients({ ingredients }) {
 function RenderDirections({ directions }) {
   if (directions) {
     return (
-      <div className="col-md-5 m-1">
-        <ol>
+       <ol>
           {directions.map(direction => {
             return (
               <div key={direction.id}>
@@ -43,23 +45,30 @@ function RenderDirections({ directions }) {
               </div>
             );
           })}
-        </ol>
-      </div>
-    );
+       </ol>
+      );
   }
 
   return <div></div>;
 }
+
 function RenderReviews({ reviews }) {
   if (reviews) {
     return (
-      <div className="col-md-5 m-1">
+      <div>
           {reviews.map(review => {
             return (
               <div className="mt-4" key={review.id}>
-                <p>{review.text}</p>
-                <p>{review.author}</p>
-                {review.date}
+                <StarRating rating={review.rating} size="small" />
+                <p className="text-justify">{review.text}</p>
+                <br />
+                <p className="text-right font-italic">{review.author}, <small>
+                                               {new Intl.DateTimeFormat("en-US", {
+                                year: "numeric",
+                                month: "short",
+                                day: "2-digit"
+                                }).format(new Date(Date.parse(review.date)))}</small>
+                </p>
                 <hr />
               </div>
             );
@@ -73,13 +82,25 @@ function RenderReviews({ reviews }) {
 
 function RenderRecipe({ recipe }) {
   return (
-    <div className="col-md-5 m-1">
-      <Card className="card">
-        <CardImg top src={recipe.image} alt={recipe.name} />
-        <div className="overlay">{recipe.description}</div>
-      </Card>
+    <div className="row m-2 justify-content-center">
+      <div className="col col-sm-10 col-md-8">
+        <Card className="card">
+          <CardImg top src={recipe.image} alt={recipe.name} />
+              <CardBody className="text-left bg-success">
+                <StarRating rating={recipe.rating} size="small" />
+                <CardTitle><h3 className="text-warning"> {recipe.name}</h3></CardTitle>
+              </CardBody>
+          {/* <div className="overlay">{recipe.description}</div> */}
+        </Card>
+        </div>
+        <div className="row mt-5 mx-1">
+            <div className="col-11 text-left">
+              <h3 className="black">Description</h3>
+              <h5>{recipe.description}</h5>
+            </div>
+        </div>
     </div>
-  );
+   );
 }
 
 function RecipeInfo(props) {
@@ -91,50 +112,58 @@ function RecipeInfo(props) {
 
   if (props.recipe) {
     return (
-      <React.Fragment>
-        <RenderRecipe recipe={props.recipe} />
-        <Nav tabs>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === "1" })}
-              onClick={() => {
-                toggle("1");
-              }}
-            >
-              Recipe
-            </NavLink>
-          </NavItem>
+        <div className="container-fluid">
+          <RenderRecipe recipe={props.recipe} />
+          <div className="row my-5 mx-1">
+            <div className="col-11 text-left">
+              <Nav tabs>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: activeTab === "1" })}
+                    onClick={() => {
+                      toggle("1");
+                    }}
+                  >
+                    Recipe
+                  </NavLink>
+                </NavItem>
 
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === "2" })}
-              onClick={() => {
-                toggle("2");
-              }}
-            >
-              Reviews
-            </NavLink>
-          </NavItem>
-        </Nav>
-        <TabContent activeTab={activeTab}>
-          <TabPane tabId="1">
-            <Row>
-              <Col sm="12">
-                <div>
-                  <h1 className="black">Ingredients</h1>
-                  <RenderIngredients ingredients={props.ingredients} />
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: activeTab === "2" })}
+                    onClick={() => {
+                      toggle("2");
+                    }}
+                  >
+                    Reviews
+                  </NavLink>
+                </NavItem>
+              </Nav>
+              <TabContent activeTab={activeTab}>
+                <TabPane tabId="1">
+                  <Row>
+                    <Col sm="12">
+                      <div>
+                        <h2 className="black mt-3">Ingredients</h2>
+                        <RenderIngredients ingredients={props.ingredients} />
 
-                  <h1 className="black">Directions</h1>
-                  <RenderDirections directions={props.directions} />
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          <TabPane tabId="2">
-            <RenderReviews reviews={props.reviews} />
-          </TabPane>
-        </TabContent>
-      </React.Fragment>
+                        <h2 className="black">Directions</h2>
+                        <RenderDirections directions={props.directions} />
+                      </div>
+                    </Col>
+                  </Row>
+                </TabPane>
+                <TabPane tabId="2">
+                <Row>
+                  <Col sm="12">
+                    <RenderReviews reviews={props.reviews} />
+                  </Col>
+                </Row>
+                </TabPane>
+              </TabContent>
+          </div>
+        </div>
+      </div>
     );
   }
   return <div />;
