@@ -16,6 +16,7 @@ function RenderRecipeItem({recipe}) {
                     </CardText>
                     <CardTitle className="card-name mt-3">{recipe.name}</CardTitle>
                  </CardBody>
+                  <div className="overlay">{recipe.description}</div>
             </Link>
         </Card>
     );
@@ -33,25 +34,18 @@ function Recipes(props) {
     });
 
     return (
-        <React.Fragment>
-            <CarouselFeature/>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Breadcrumb>
-                            <BreadcrumbItem><Link to="/recipes">Home</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>Recipes</BreadcrumbItem>
-                        </Breadcrumb>
-                        <h2>Recipes</h2>
-                        <hr />
+        <div className="container-fluid">
+                <div className="row justify-content-center my-5"> 
+                    <div className="col-md-8 col-lg-7 mx-auto">
+                        <CarouselFeature/>
+                        <hr/>
                     </div>
                 </div>
-                <div className="row justify-content-center">
+                <div className="row my-5 justify-content-center bg-light">
                     {recipe}
                 </div>
             </div>
-        </React.Fragment>
-    );
+        );
 }
 
 export default Recipes;

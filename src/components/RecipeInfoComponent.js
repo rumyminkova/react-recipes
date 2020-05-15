@@ -3,9 +3,7 @@ import {
   Card,
   CardImg,
   CardBody,
-  CardText,
   CardTitle,
-  CardImgOverlay,
   TabContent,
   TabPane,
   Nav,
@@ -83,12 +81,12 @@ function RenderReviews({ reviews }) {
 function RenderRecipe({ recipe }) {
   return (
     <div className="row m-2 justify-content-center">
-      <div className="col col-sm-10 col-md-8">
+      <div className="col col-sm-10 col-md-8 col-lg-7">
         <Card className="card">
           <CardImg top src={recipe.image} alt={recipe.name} />
-              <CardBody className="text-left bg-success">
+              <CardBody className="text-left">
                 <StarRating rating={recipe.rating} size="small" />
-                <CardTitle><h3 className="text-warning"> {recipe.name}</h3></CardTitle>
+                <CardTitle><h3 className="recipe-title"> {recipe.name}</h3></CardTitle>
               </CardBody>
           {/* <div className="overlay">{recipe.description}</div> */}
         </Card>

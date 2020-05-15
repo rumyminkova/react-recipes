@@ -6,22 +6,25 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
+import Recipes from "./RecipesComponent";
+import { RECIPES } from "../shared/recipes";
+  
 
 const items = [
   {
-    src: "/assets/images/classic-beef-stroganoff.png",
-    altText: "Classic Beef Stroganoff",
-    caption: "Very Delicous!"
+    src: RECIPES[0].image, 
+    altText: RECIPES[0].description,
+    caption: RECIPES[0].name
   },
   {
-    src: "/assets/images/strawberry-chocolate-mousse-cake.png",
-    altText: "Strawberry Chocolate Mousse cake",
-    caption: "Tasty Delights!"
+    src:  RECIPES[1].image, 
+    altText: RECIPES[0].description,
+    caption: RECIPES[1].name
   },
   {
-    src: "/assets/images/fluffy-pancakes.png",
-    altText: "Fluffy Pancakes",
-    caption: "Syrupy Goodness!"
+    src: RECIPES[2].image, 
+    altText: RECIPES[0].description,
+    caption: RECIPES[2].name
   }
 ];
 
@@ -51,18 +54,17 @@ const CarouselFeature = props => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <div className="row justify-content-center">
-          <div className="col-3">
-            <img className="carousel-image" src={item.src} alt={item.altText} />
+        key={item.src} className="bg-secondary">
 
-            <CarouselCaption
-              captionText={item.caption}
+            <img className="d-block w-100 carousel-image" src={item.src} alt={item.altText} />
+
+            <CarouselCaption 
+              captionText={item.altText}
               captionHeader={item.caption}
-            />
-          </div>
-        </div>
+              className="carousel-caption" />
+ 
+ 
+
       </CarouselItem>
     );
   });

@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 body {
+  
   font-family: "Open Sans", sans-serif;
 }
 
-h1 {
-  font-family: "Marck Script", cursive;
-  color: yellow;
+h1, h2 {
+  font-family: 'Satisfy', cursive;
+
 }
 
 h3 {
-  color: yellow;
+  color:   rgb(255, 123, 0);
   font-weight: lighter;
 }
 .card-shadow {
@@ -26,7 +28,7 @@ h3 {
 
 .card-name {
   font-weight: bold;
-  color: green;
+  color: rgb(1, 56, 22);
 }
 
 .row-content {
@@ -35,25 +37,19 @@ h3 {
   min-height: 200px;
 }
 
-.site-footer {
-  background: transparent;
-}
 
 .jumbotron {
   background: url("cutting-board_header.jpg") no-repeat center center / cover;
   margin: 0;
-  color: green;
   padding: 30px 0px;
+  color: rgb(255, 123, 0);
 }
 
-.jumbotron h2 {
-  color: yellow;
-}
 
 .navbar-dark {
   background: transparent;
-  border-color: green;
-  color: green;
+  border-color: rgb(1, 56, 22);
+  color:rgb(1, 56, 22);
 }
 
 .search-input {
@@ -68,7 +64,8 @@ h3 {
 .search-input:focus {
   background: transparent;
   box-shadow: none;
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px solid rgb(255, 123, 0);
+
   font-size: large;
 }
 
@@ -95,9 +92,8 @@ h3 {
 }
 
 .site-footer {
-  background: url("cutting-board_footer.jpg") no-repeat center center / cover;
+  background:rgb(1, 56, 22);
   margin: 0;
-  color: green;
   padding: 20px 0px;
 }
 
@@ -116,7 +112,11 @@ h3 {
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: rgb(182, 192, 196);
+  /* background-color: rgb(182, 192, 196); */
+  background-color: rgb(1, 56, 22);
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
 }
 
 .card:hover .overlay {
@@ -136,7 +136,39 @@ h3 {
 }
 
 .black {
-  color: black;
-  font-family: "Marck Script", cursive;
+  color:rgb(255, 123, 0);
+  font-family:'Satisfy', cursive;
+}
+
+.recipe-title{
+  background-color:rgb(1, 56, 22);
+  color: rgb(255, 123, 0);
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.modal-custom {
+  background-color: rgb(255, 123, 0);
+  color: white;
+}
+
+.carousel-caption{
+  background-color: rgba(1, 56, 22,0.7);
+}
+
+.custom-social-button {
+  transition: all .4s;
+  font-weight: lighter;
+  font-size: x-large;
+  background-color: transparent;
+  border-color: transparent;
+  color:rgb(255, 123, 0);
+}
+
+.custom-social-button:hover{
+  transform: translateY(-1px);
+  color:rgb(255, 123, 0);
+  background-color: transparent;
+  border-color: transparent;
 }
 

@@ -44,8 +44,8 @@ class Header extends Component {
                     <div className="container">
                         <div className="row p-1">
                             <div className="col align-self-start">
-                                <h1 className="display-3">Recipes</h1>
-                                <h3>healthy recipes for everyone</h3>
+                                <h1 className="display-1">Recipes</h1>
+                                <h2>for everyone</h2>
                             </div>
                         </div>
               
@@ -106,7 +106,7 @@ class Header extends Component {
             
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Sign in</ModalHeader>
+                    <ModalHeader className="modal-custom" toggle={this.toggleModal}>Sign in to your Cookbook</ModalHeader>
                     <ModalBody>
                         <Form onSubmit={this.handleLogin}>
                             <FormGroup>
@@ -126,7 +126,7 @@ class Header extends Component {
                                     Remember me
                                 </Label>
                             </FormGroup>
-                            <Button type="submit" value="submit" color="primary">Sign in</Button>
+                            <Button className="modal-custom" type="submit" value="submit">Sign in</Button>
                         </Form>
                     </ModalBody>
                 </Modal>
