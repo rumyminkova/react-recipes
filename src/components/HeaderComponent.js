@@ -3,6 +3,8 @@ import { Nav, Navbar, NavbarToggler, Collapse, NavItem, DropdownToggle,Uncontrol
         Button, Modal, ModalHeader, ModalBody,
         Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { RecipesComponent } from './RecipesComponent';
+import { RECIPES } from '../shared/recipes';
 
 class Header extends Component {
 
@@ -71,10 +73,29 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/aboutus">
+                                    <NavLink className="nav-link" onClick={RenderCat}>
                                         Desserts
                                     </NavLink>
                                 </NavItem>
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle nav caret>
+                                        Options
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem>
+                                            OPTION1
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            OPTION2 
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                             OPTION3   
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            OPTION4
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
                             </Nav>
                          </Collapse>
                         <div className="container">
