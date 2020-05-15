@@ -42,7 +42,7 @@ function Recipes(props) {
                             <BreadcrumbItem><Link to="/recipes">Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Recipes</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>Directory</h2>
+                        <h2>Recipes</h2>
                         <hr />
                     </div>
                 </div>
