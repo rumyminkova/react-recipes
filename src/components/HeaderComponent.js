@@ -3,8 +3,7 @@ import { Nav, Navbar, NavbarToggler, Collapse, NavItem, DropdownToggle,Uncontrol
         Button, Modal, ModalHeader, ModalBody,
         Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { RecipesComponent } from './RecipesComponent';
-import { RECIPES } from '../shared/recipes';
+
 
 class Header extends Component {
 
@@ -73,7 +72,7 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" onClick={RenderCat}>
+                                    <NavLink className="nav-link" to="/directory">
                                         Desserts
                                     </NavLink>
                                 </NavItem>
