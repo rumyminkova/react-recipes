@@ -1,8 +1,9 @@
 import React, { Component }  from 'react';
-import { Nav, Navbar, NavbarToggler, Collapse, NavItem, Jumbotron,
+import { Nav, Navbar, NavbarToggler, Collapse, NavItem, DropdownToggle,UncontrolledDropdown, DropdownMenu, DropdownItem, Jumbotron, 
         Button, Modal, ModalHeader, ModalBody,
         Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+
 
 class Header extends Component {
 
@@ -43,37 +44,14 @@ class Header extends Component {
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row p-1">
-                            <div className="col align-self-start">
-                                <h1 className="display-1">Recipes</h1>
-                                <h2>for everyone</h2>
-                            </div>
-                        </div>
-              
-                        <div class="row justify-content-end">
-                            <div className="col-3 offset-9 m-0 text-right">
-                                <Button onClick={this.toggleModal} className="btn btn-success">
-                                    <i className="fa fa-book fa-lg" /> My Cookbook
-                                </Button>
+                            <div className="col align-center">
+                                <h1 className="display-3">Recipes</h1>
+                                <h3>Healthy recipes for everyone!</h3>
                             </div>
                         </div>
                     </div>
                 </Jumbotron>
-
-
-                <div className="container">
-                    <div className="row p-1 my-3 justify-content-center">
-                        <div className="col-12 col-md-10 col-lg-11 text-center">
-                            <Form>
-                                <div className="input-group">
-                                    <Input type="text" className="form-control search-input" placeholder="Search ..."/>
-                                    <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
-                                </div>
-                            </Form>
-                        </div>
-                    </div>
-                </div>
-
-                {/* <Navbar light sticky="top" expand="md" className="my-3">
+                <Navbar light sticky="top" expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
@@ -90,18 +68,52 @@ class Header extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/directory">
-                                         Main Dishes
+                                         Main
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/aboutus">
+                                    <NavLink className="nav-link" to="/directory">
                                         Desserts
                                     </NavLink>
                                 </NavItem>
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle nav caret>
+                                        Options
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem>
+                                            OPTION1
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            OPTION2 
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                             OPTION3   
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            OPTION4
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
                             </Nav>
                          </Collapse>
+                        <div className="container">
+                            <div className="coltext-center">
+                                <Form>
+                                    <div className="input-group">
+                                        <Input type="text" className="form-control search-input" placeholder="Search ..." />
+                                        <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
+                                    </div>
+                                </Form>
+                            </div>
+                        </div>
+                        <div className="col-3 offset-9 m-0 text-right">
+                            <Button onClick={this.toggleModal} className="btn btn-success">
+                                <i className="fa fa-book fa-lg" /> My Cookbook
+                                </Button>
+                        </div>
                     </div>
-                </Navbar> */}
+                </Navbar>
 
             
 
@@ -130,6 +142,7 @@ class Header extends Component {
                         </Form>
                     </ModalBody>
                 </Modal>
+
             </React.Fragment>
         );
     }

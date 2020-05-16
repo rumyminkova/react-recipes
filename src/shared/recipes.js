@@ -4,7 +4,7 @@ export const RECIPES = [
         name: "Lemon Basil Chicken",
         image: "/assets/images/lemon-basil-chicken.png",
         rating: 5,
-        category: "main dish",
+        category: "main",
         description: "Fabulous lemon basil chicken dish that is always a crowd pleaser! Quick and easy, this recipe never fails. Serve plain or over rice."
     },
     {
@@ -12,7 +12,7 @@ export const RECIPES = [
         name: "Beef Stroganoff in a Slow Cooker",
         image: "/assets/images/classic-beef-stroganoff.png",
         rating: 4,
-        category: "main dish",
+        category: "main",
         description: "This classic beef stroganoff recipe uses ingredients commonly kept on hand for an easy and delicious family meal."
     },
     {
