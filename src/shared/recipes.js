@@ -9,7 +9,7 @@ export const RECIPES = [
     },
     {
         id: 1,
-        name: "Classic Beef Stroganoff in a Slow Cooker",
+        name: "Beef Stroganoff in a Slow Cooker",
         image: "/assets/images/classic-beef-stroganoff.png",
         rating: 4,
         category: "main",
