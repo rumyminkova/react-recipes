@@ -56,7 +56,7 @@ const CarouselFeature = props => {
         onExited={() => setAnimating(false)}
         key={item.src} className="bg-secondary">
 
-            <img className="d-block w-100 carousel-image" src={item.src} alt={item.altText} />
+            <img className="d-block h-100 w-100 carousel-image" src={item.src} alt={item.altText} />
 
             <CarouselCaption 
               captionText={item.altText}
