@@ -22,7 +22,7 @@ function RenderIngredients({ ingredients }) {
           {ingredients.map(ingredient => {
             return (
               <div key={ingredient.id}>
-                <li>{ingredient.ingredientName}</li>
+                <li className="my-1">{ingredient.ingredientName}</li>
               </div>
             );
           })}
@@ -39,7 +39,7 @@ function RenderDirections({ directions }) {
           {directions.map(direction => {
             return (
               <div key={direction.id}>
-                <li>{direction.text}</li>
+                <li className="my-1">{direction.text}</li>
               </div>
             );
           })}
@@ -80,6 +80,7 @@ function RenderReviews({ reviews }) {
 
 function RenderRecipe({ recipe }) {
   return (
+    <React.Fragment>
     <div className="row m-2 justify-content-center">
       <div className="col col-sm-10 col-md-8 col-lg-7">
         <Card className="card">
@@ -90,14 +91,15 @@ function RenderRecipe({ recipe }) {
               </CardBody>
           {/* <div className="overlay">{recipe.description}</div> */}
         </Card>
-        </div>
-        <div className="row mt-5 mx-1">
+      </div>
+    </div>
+    <div className="row mt-5 mx-1">
             <div className="col-11 text-left">
               <h3 className="black">Description</h3>
               <h5>{recipe.description}</h5>
             </div>
-        </div>
     </div>
+    </React.Fragment>
    );
 }
 
