@@ -52,68 +52,48 @@ class Header extends Component {
                     </div>
                 </Jumbotron>
                 <Navbar light sticky="top" expand="md">
-                    <div className="container">
+                    <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar className="nav-fill text-center">
+                            <Nav navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                    All
+                                    <NavLink className="nav-link" to="/All">
+                                        All
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/home">
-                                        Breakfast
+                                    <NavLink className="nav-link" to="/Breakfast">
+                                    Breakfast
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/directory">
-                                         Main
-                                    </NavLink>
+                                    <NavLink className="nav-link" to="/Main dishes">
+                                    Main dishes                          </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/directory">
-                                        Desserts
+                                    <NavLink className="nav-link" to="/Desserts">
+                                    Desserts
                                     </NavLink>
                                 </NavItem>
-                                <UncontrolledDropdown nav inNavbar>
-                                    <DropdownToggle nav caret>
-                                        Options
-                                    </DropdownToggle>
-                                    <DropdownMenu right>
-                                        <DropdownItem>
-                                            OPTION1
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                            OPTION2 
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                             OPTION3   
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                            OPTION4
-                                        </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
                             </Nav>
-                         </Collapse>
-                        <div className="container">
-                            <div className="coltext-center">
+                            </Collapse>
+                            <span className="navbar-text ml-auto mr-5">
                                 <Form>
                                     <div className="input-group">
                                         <Input type="text" className="form-control search-input" placeholder="Search ..." />
-                                        <Button type="button" className="btn btn-white search-button"><i class="fa fa-search text-success fa-2x"></i></Button>
+                                        <Button color="success" type="button" className="btn btn-white search-button"><i class="fa fa-search fa-2x"></i></Button>
                                     </div>
                                 </Form>
-                            </div>
-                        </div>
-                        <div className="col-3 offset-9 m-0 text-right">
-                            <Button onClick={this.toggleModal} className="btn btn-success">
-                                <i className="fa fa-book fa-lg" /> My Cookbook
+                            </span>
+                            <span className="navbar-text ml-auto">
+                                <Button  outline color="success" onClick={this.toggleModal}>
+                                    <i className="fa fa-book fa-lg" /> My Cookbook
                                 </Button>
-                        </div>
+                            </span>
+   
                     </div>
                 </Navbar>
+  
 
             
 
